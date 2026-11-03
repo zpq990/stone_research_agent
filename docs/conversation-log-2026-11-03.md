@@ -1,6 +1,8 @@
 # 对话记录摘要 · 2026-11-03
 
 > 本文是会话要点摘要，不是逐字转录。完整建议见 [content-refresh-recommendations.md](content-refresh-recommendations.md)。
+>
+> 历史记录：文中「知野 ZHIYE」「5 块结构」「页面代码未做修改」等描述均为当天状态；后续品牌已改为「石头」，页面也已改为折叠结构，文案与术语已定稿。当前实现以 [CLAUDE.md](CLAUDE.md) 和 `index.html` 为准，正式方向与文案口径以 `document/项目方向定稿.md` 为准。
 
 ## 1. 项目扫描
 

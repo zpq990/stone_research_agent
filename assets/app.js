@@ -72,6 +72,58 @@
     revealItems.forEach((item) => item.classList.add("is-visible"));
   }
 
+  /* ---------- Fold sections ---------- */
+
+  const foldGroup = document.querySelector("[data-fold-group]");
+  const folds = foldGroup
+    ? Array.from(foldGroup.querySelectorAll(":scope > details.fold"))
+    : [];
+
+  folds.forEach((fold) => {
+    fold.addEventListener("toggle", () => {
+      if (!fold.open) return;
+      folds.forEach((other) => {
+        if (other !== fold) other.open = false;
+      });
+    });
+  });
+
+  const openFold = (fold) => {
+    if (!fold) return;
+    folds.forEach((other) => {
+      if (other !== fold) other.open = false;
+    });
+    fold.open = true;
+  };
+
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const hash = link.getAttribute("href");
+      const target = hash && hash !== "#" ? document.querySelector(hash) : null;
+      if (!target || !target.matches("details.fold")) return;
+      event.preventDefault();
+      openFold(target);
+      try {
+        history.replaceState(null, "", hash);
+      } catch {
+        /* file:// pages can refuse a history update; the section still opens. */
+      }
+      target.scrollIntoView({
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+        block: "start",
+      });
+    });
+  });
+
+  const openFoldFromHash = () => {
+    if (!window.location.hash) return;
+    const target = document.querySelector(window.location.hash);
+    if (target && target.matches("details.fold")) openFold(target);
+  };
+
+  window.addEventListener("hashchange", openFoldFromHash);
+  openFoldFromHash();
+
   /* ---------- Research forms ---------- */
 
   const forms = Array.from(document.querySelectorAll("[data-research-form]"));
@@ -279,10 +331,6 @@
     showModal();
     startRun(topic);
   };
-
-  document.querySelectorAll("[data-open-research]").forEach((button) => {
-    button.addEventListener("click", () => openResearch(primaryForm));
-  });
 
   forms.forEach((form) => {
     form.addEventListener("submit", (event) => {

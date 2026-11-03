@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#efebe3">
-  <title>石头 — 陌生领域，也要有自己的判断</title>
-  <meta name="description" content="石头是 AI 调研工作台。给出一个陌生主题，它会拆问题、找证据、标分歧，交付一份每个结论都能复查的调研文档。">
-  <meta property="og:title" content="石头 — 陌生领域，也要有自己的判断">
-  <meta property="og:description" content="从完全陌生，到有自己的判断。每一个结论，都有出处。">
+  <meta name="theme-color" content="#e7e5e1">
+  <title>石头 — AI 调研 agent｜给我一个陌生主题，还你一份有出处的报告</title>
+  <meta name="description" content="石头是 AI 调研 agent。先拆问题、再定搜索范围，只把一手材料当证据，交付一份每个结论都能查回原文、每处分歧都保留双方证据的调研文档。">
+  <meta property="og:title" content="石头 — AI 调研 agent｜给我一个陌生主题，还你一份有出处的报告">
+  <meta property="og:description" content="不是多查一点，是先把范围定清楚。每个结论都能查回原文，每处分歧都保留双方证据。">
   <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%232b2117'/%3E%3Cpath d='M18 22h28M46 22 31 43' stroke='%23f4efe6' stroke-width='4' stroke-linecap='square'/%3E%3Crect x='26' y='37' width='17' height='12' stroke='%23f4efe6' stroke-width='4' fill='none'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/styles.css">
@@ -28,7 +28,7 @@
         </span>
         <span class="brand-name">
           <strong>石头</strong>
-          <small>研究与判断</small>
+          <small>AI 调研 agent</small>
         </span>
       </a>
 
@@ -39,10 +39,6 @@
       </nav>
 
       <div class="header-actions">
-        <button class="btn btn-primary btn-sm" type="button" data-open-research>
-          开始调研
-          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
         <button class="nav-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
           <span></span><span></span>
         </button>
@@ -53,7 +49,6 @@
       <a href="#report">示例报告</a>
       <a href="#method">怎么做</a>
       <a href="#faq">常见问题</a>
-      <button class="btn btn-primary" type="button" data-open-research>开始调研</button>
     </nav>
   </header>
 
@@ -61,10 +56,10 @@
     <section class="hero" id="top">
       <div class="hero-copy">
         <h1>
-          <span class="line-mask"><span class="line-inner">从完全陌生，</span></span>
-          <span class="line-mask"><span class="line-inner">到有自己的判断。</span></span>
+          <span class="line-mask"><span class="line-inner">给我一个陌生主题，</span></span>
+          <span class="line-mask"><span class="line-inner">还你一份有出处的报告。</span></span>
         </h1>
-        <p class="hero-lede reveal">石头是 AI 调研工作台。给我一个你不熟悉的主题，它会交给你一份每个结论都能复查的调研文档。</p>
+        <p class="hero-lede reveal">石头是一个 AI 调研 agent，专门对付「好像懂一点、其实说不清」的问题。它先拆问题、定范围，再去翻财报、论文和监管文件；写报告时，出处、分歧、没查清的地方，一个都不藏。</p>
 
         <form class="research-form reveal d1" data-research-form novalidate>
           <label for="research-topic">从一个你一直没搞懂的问题开始</label>
@@ -93,280 +88,290 @@
             <button type="button" data-topic="银发经济">银发经济</button>
           </div>
 
-          <p class="form-notes">14 个一手信源 · 3 处标出的分歧 · 出处可查</p>
+          <p class="form-notes"><span>每条判断带出处</span> · <span>分歧保留双方证据</span> · <span>有多大把握也写上</span></p>
         </form>
       </div>
 
-      <figure class="hero-fragment reveal d2" aria-labelledby="sample-caption">
-        <article class="report-peek" data-ui>
-          <div class="peek-top">
-            <span>石头 · 研究文档</span>
-            <span>样本</span>
+      <aside class="hero-report reveal d2" aria-labelledby="hero-report-title">
+        <h2 class="hero-report-title" id="hero-report-title">量产瓶颈不在材料，<br>在良率与成本。</h2>
+        <p class="hero-report-topic">样本报告 · 固态电池 · 示例</p>
+        <dl class="hero-report-facts">
+          <div>
+            <dt>来源</dt>
+            <dd>某动力电池企业 2024 年报 · 第 42 页 · 2025-03-15</dd>
           </div>
-          <div class="peek-status">
-            <span class="status-dot" aria-hidden="true"></span>
-            <span>调研完成</span>
-            <span>已归档</span>
+          <div>
+            <dt>把握</dt>
+            <dd>中 · 两家独立信源，口径不同</dd>
           </div>
-
-          <h2>固态电池，<br>离量产还有多远？</h2>
-          <p class="peek-meta">能源 · 技术路线 · 制造</p>
-
-          <div class="peek-block">
-            <p class="peek-label">核心判断</p>
-            <ul>
-              <li>量产瓶颈不在材料，在良率与成本。</li>
-              <li>实验室性能不等于工程可用性。</li>
-              <li>产业时间表普遍乐观，需要用里程碑校准。</li>
-            </ul>
+          <div>
+            <dt>分歧</dt>
+            <dd>A 机构 2027 小批量交付 / B 机构 2030 规模化装车</dd>
           </div>
+        </dl>
+        <a class="hero-report-link" href="#report">展开完整报告 <span aria-hidden="true">↓</span></a>
+      </aside>
+    </section>
 
-          <div class="signal-strip">
-            <span>关键变量</span>
-            <div class="tag-row">
-              <span>材料体系</span>
-              <span>制造成本</span>
-              <span>量产良率</span>
+    <section class="contrast" aria-labelledby="contrast-title">
+      <div class="contrast-inner">
+        <div class="contrast-head reveal">
+          <h2 class="contrast-title" id="contrast-title">不是多查一点，<br>是先把范围定清楚。</h2>
+          <p class="contrast-lede">和通用 agent 的区别不在答案，在过程：通用 agent 给你一个看起来对的答案；石头给你一份知道哪里可能不对的调研。</p>
+          <p class="contrast-note">这不是说通用 agent 做不到，而是它们通常把出处、范围和分歧放在回答之后；石头把它们当成正文的一部分。</p>
+        </div>
+
+        <table class="contrast-table reveal d1">
+          <caption class="sr-only">通用 agent 与石头的区别</caption>
+          <thead>
+            <tr>
+              <th scope="col">环节</th>
+              <th scope="col">通用 agent</th>
+              <th scope="col">石头</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">开始</th>
+              <td data-label="通用 agent">先搜，再总结</td>
+              <td data-label="石头">先拆问题，再定搜索范围</td>
+            </tr>
+            <tr>
+              <th scope="row">过程</th>
+              <td data-label="通用 agent">只给一个进度条</td>
+              <td data-label="石头">说清在查什么、为什么查、哪条没找到</td>
+            </tr>
+            <tr>
+              <th scope="row">证据</th>
+              <td data-label="通用 agent">搜到什么用什么</td>
+              <td data-label="石头">一手材料才当证据，二手只做线索</td>
+            </tr>
+            <tr>
+              <th scope="row">冲突</th>
+              <td data-label="通用 agent">有冲突，取一个看起来对的</td>
+              <td data-label="石头">双方证据和分歧点都留在文档里</td>
+            </tr>
+            <tr>
+              <th scope="row">不确定</th>
+              <td data-label="通用 agent">不知道，也写得像知道</td>
+              <td data-label="石头">找不到，就写找不到</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="fold-stack" data-fold-group>
+      <details class="fold" id="report">
+        <summary class="fold-summary reveal">
+          <span class="fold-label">示例报告</span>
+          <h2 class="fold-title">固态电池，离量产还有多远？</h2>
+          <span class="fold-meta">核心判断：瓶颈不在材料，在良率与成本。</span>
+          <span class="fold-toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="fold-body">
+          <p class="fold-intro">每条判断都能翻回原文；分歧保留双方证据；不确定的地方写明把握。</p>
+
+          <article class="report-doc reveal d1">
+            <header class="doc-head">
+              <h3>固态电池，<br>离量产还有多远？</h3>
+              <p class="doc-meta">能源 · 技术路线 · 制造 · 样本报告</p>
+            </header>
+
+            <div class="doc-body">
+              <section class="doc-abstract">
+                <h4>执行摘要</h4>
+                <p>固态电池不是单一技术，而是一组以固态电解质替代液态电解液的路线集合。真正决定产业化节奏的，不是实验室里的能量密度，而是界面稳定性、制造良率与单位成本能否同时跨过工程门槛。</p>
+              </section>
+
+              <section class="doc-claim">
+                <h4>核心判断</h4>
+                <p class="claim-line">量产瓶颈不在材料，在良率与成本。</p>
+                <p class="claim-note">真正决定节奏的，是界面稳定性、制造良率与单位成本能否同时跨过工程门槛。</p>
+                <div class="claim-source">
+                  <span>来源：某动力电池企业 2024 年年度报告 · 第 42 页</span>
+                  <span>2025-03-15</span>
+                  <span class="tag">一手财报</span>
+                </div>
+              </section>
+
+              <section class="doc-claim">
+                <h4>一处标出的分歧</h4>
+                <div class="debate">
+                  <div>
+                    <span>A 机构</span>
+                    <strong>2027 年前后量产</strong>
+                    <p>依据：中试线良率数据</p>
+                  </div>
+                  <div>
+                    <span>B 机构</span>
+                    <strong>2030 年之后</strong>
+                    <p>依据：车规验证周期</p>
+                  </div>
+                </div>
+                <p class="claim-note">分歧点：双方对「量产」的定义不同——A 指小批量交付，B 指规模化装车。</p>
+              </section>
+
+              <section class="doc-claim">
+                <h4>把握</h4>
+                <p class="claim-line">中。 <span class="confidence-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span></p>
+                <p class="claim-note">仅有两家独立信源，且口径不同。结论可用，但需要新的证据校准。</p>
+              </section>
+
+              <section class="doc-sources">
+                <h4>信源</h4>
+                <ol>
+                  <li><span>某动力电池企业 2024 年年度报告</span><span>2025-03-15 · 一手财报</span></li>
+                  <li><span>某动力电池产业联盟月报</span><span>2025-02 · 行业数据</span></li>
+                  <li><span>《固态电池产业链跟踪》</span><span>2025-01 · 二手研究 · 交叉验证</span></li>
+                </ol>
+              </section>
             </div>
-          </div>
 
-          <div class="peek-foot">
-            <span>14 个一手信源</span>
-            <span>3 处标出的分歧</span>
-            <span>置信度 中</span>
-          </div>
-        </article>
+            <footer class="doc-foot">
+              <span>5 节 · 3 条信源</span>
+              <span>可导出 PDF / Markdown</span>
+            </footer>
+          </article>
+        </div>
+      </details>
 
-        <p class="peek-note" aria-hidden="true">样本报告<br>结构示例</p>
-        <figcaption class="sr-only" id="sample-caption">一份固态电池主题的示例调研文档缩略预览</figcaption>
-      </figure>
-    </section>
+      <details class="fold fold--dark" id="method">
+        <summary class="fold-summary reveal">
+          <span class="fold-label">怎么做</span>
+          <h2 class="fold-title">拆问题，找证据，标分歧。</h2>
+          <span class="fold-meta">先拆问题，再定搜索范围，一手材料才当证据。</span>
+          <span class="fold-toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="fold-body">
+          <p class="fold-intro">每一步都留下证据，而不是只留下最后一段话。</p>
 
-    <section class="section report" id="report">
-      <div class="section-head">
-        <h2 class="reveal">一份报告，<br>长这样。</h2>
-        <p class="reveal d1">不是聊天记录。是一份能继续追问、继续验证的判断文档。</p>
-      </div>
-
-      <div class="report-spread">
-        <aside class="report-margins" aria-hidden="true">
-          <p class="margin-lede">读的时候，<br>先看纸边。</p>
-          <div class="margin-note reveal">
-            <span>出处</span>
-            <p>每一条判断，都能翻回原文。</p>
-          </div>
-          <div class="margin-note reveal d1">
-            <span>分歧</span>
-            <p>冲突不抹平，双方证据都留着。</p>
-          </div>
-          <div class="margin-note reveal d2">
-            <span>置信度</span>
-            <p>不确定就说中，并说明为什么。</p>
-          </div>
-        </aside>
-
-        <article class="report-doc reveal d1">
-          <header class="doc-head">
-            <h3>固态电池，<br>离量产还有多远？</h3>
-            <p class="doc-meta">能源 · 技术路线 · 制造 · 样本报告</p>
-          </header>
-
-          <div class="doc-body">
-            <section class="doc-abstract">
-              <h4>执行摘要</h4>
-              <p>固态电池不是单一技术，而是一组以固态电解质替代液态电解液的路线集合。真正决定产业化节奏的，不是实验室里的能量密度，而是界面稳定性、制造良率与单位成本能否同时跨过工程门槛。</p>
-            </section>
-
-            <section class="doc-claim">
-              <h4>核心判断</h4>
-              <p class="claim-line">量产瓶颈不在材料，在良率与成本。</p>
-              <p class="claim-note">真正决定节奏的，是界面稳定性、制造良率与单位成本能否同时跨过工程门槛。</p>
-              <div class="claim-source">
-                <span>来源：宁德时代 2024 年年度报告 · 第 42 页</span>
-                <span>2025-03-15</span>
-                <span class="tag">一手财报</span>
+          <div class="method-flow">
+            <article class="exchange reveal">
+              <p class="exchange-say">先把问题拆开。</p>
+              <div class="call-panel" data-ui>
+                <span>你的问题</span>
+                <p>具身智能为什么还没进家庭？</p>
               </div>
-            </section>
+              <div class="response-panel" data-ui>
+                <div class="response-head"><span>问题树</span><span>4 个可回答的问题</span></div>
+                <ul>
+                  <li>机器人本体成本降到多少，才可能进家庭？</li>
+                  <li>家庭场景里，哪一类任务最先跑通？</li>
+                  <li>安全与责任边界由谁承担？</li>
+                  <li>现在谁在真实家庭里做长期测试？</li>
+                </ul>
+              </div>
+            </article>
 
-            <section class="doc-claim">
-              <h4>一处标出的分歧</h4>
-              <div class="debate">
-                <div>
-                  <span>A 机构</span>
-                  <strong>2027 年前后量产</strong>
-                  <p>依据：中试线良率数据</p>
-                </div>
-                <div>
-                  <span>B 机构</span>
-                  <strong>2030 年之后</strong>
-                  <p>依据：车规验证周期</p>
+            <article class="exchange reveal">
+              <p class="exchange-say">只找能回到原文的证据。</p>
+              <div class="call-panel" data-ui>
+                <span>检索范围</span>
+                <p>论文、财报、监管文件、专利与公开访谈</p>
+              </div>
+              <div class="response-panel" data-ui>
+                <div class="response-head"><span>证据清单</span><span>每条都带出处</span></div>
+                <ul class="evidence-list">
+                  <li><strong>2025 年人形机器人技术报告</strong><span>第 12 页 · 2025-06 · 一手</span></li>
+                  <li><strong>某公司 2025 年一季度财报</strong><span>第 8 页 · 2025-04 · 一手</span></li>
+                  <li><strong>家庭服务机器人安全规范（征求意见稿）</strong><span>2025-03 · 监管文件</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="exchange reveal">
+              <p class="exchange-say">分歧不抹平，最后写成一份文档。</p>
+              <div class="call-panel" data-ui>
+                <span>交付</span>
+                <p>一份能拿去讨论的调研文档</p>
+              </div>
+              <div class="response-panel response-wide" data-ui>
+                <div class="response-head"><span>调研文档 · 目录</span><span>6 节</span></div>
+                <div class="mini-doc">
+                  <strong>具身智能，离家庭还有多远？</strong>
+                  <p>结论：最先跑通的是单一任务，而不是通用家务。</p>
+                  <p>边界：仅有两家独立信源，把握：中。</p>
+                  <p>下一步：验证成本、安全责任与真实家庭测试数据。</p>
                 </div>
               </div>
-              <p class="claim-note">分歧点：双方对「量产」的定义不同——A 指小批量交付，B 指规模化装车。</p>
-            </section>
-
-            <section class="doc-claim">
-              <h4>置信度</h4>
-              <p class="claim-line">中。 <span class="confidence-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span></p>
-              <p class="claim-note">仅有两家独立信源，且口径不同。结论可用，但需要新的证据校准。</p>
-            </section>
-
-            <section class="doc-sources">
-              <h4>信源</h4>
-              <ol>
-                <li><span>宁德时代 2024 年年度报告</span><span>2025-03-15 · 一手财报</span></li>
-                <li><span>动力电池产业创新联盟月报</span><span>2025-02 · 行业数据</span></li>
-                <li><span>《固态电池产业链跟踪》</span><span>2025-01 · 二手研究 · 交叉验证</span></li>
-              </ol>
-            </section>
+            </article>
           </div>
+        </div>
+      </details>
 
-          <footer class="doc-foot">
-            <span>7 章 · 20+ 条引用</span>
-            <span>可导出 PDF / Markdown</span>
-          </footer>
-        </article>
-      </div>
-    </section>
+      <details class="fold" id="faq">
+        <summary class="fold-summary reveal">
+          <span class="fold-label">常见问题</span>
+          <h2 class="fold-title">开始之前，你可能想知道。</h2>
+          <span class="fold-meta">和通用 agent 的区别 · 找不到证据怎么办</span>
+          <span class="fold-toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="fold-body">
+          <div class="faq-list">
+            <details class="faq-item reveal">
+              <summary>
+                <span>一次调研包含什么？</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-answer">
+                <p>从问题地图、证据清单、分歧标注，到一份带出处的文档。你会拿到结论、结论的边界，以及下一步该验证什么；不是一份资料合集。</p>
+              </div>
+            </details>
 
-    <figure class="material-band">
-      <div class="material-grid">
-        <div class="material-item">
+            <details class="faq-item reveal d1">
+              <summary>
+                <span>可信吗？会不会编造？</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-answer">
+                <p>每条关键结论都标注出处、发布时间和把握程度；事实、推论、争议分开写，无法验证的内容不会被包装成结论。当前页面是交互原型，示例内容用于展示文档结构。</p>
+              </div>
+            </details>
+
+            <details class="faq-item reveal d2">
+              <summary>
+                <span>和直接问 AI、搜索有什么区别？</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-answer">
+                <p>搜索给你很多页面，对话给你一段流畅的回答。石头留下的是可复查的判断：为什么得出这个结论、证据来自哪里、哪里还有分歧。</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <div class="material-band">
+      <div class="material-strip">
+        <figure class="material-photo reveal">
           <img src="assets/images/stone-wall.jpg" width="1600" height="1000" loading="lazy" alt="海边风化的石墙，几只海鸟停在墙顶。">
           <figcaption>海边的石墙 <span>Jill Heyer / Unsplash</span></figcaption>
-        </div>
-        <div class="material-item">
+        </figure>
+        <figure class="material-photo reveal d1">
           <img src="assets/images/fog-forest.jpg" width="1600" height="1000" loading="lazy" alt="雾气漫过湖边的林地与水面。">
           <figcaption>雾里的林地 <span>Paul Jarvis / Unsplash</span></figcaption>
-        </div>
+        </figure>
+        <figure class="material-photo reveal d2">
+          <img src="assets/images/stone-wall-dordogne.jpg" width="1100" height="726" loading="lazy" alt="多尔多涅乡间一面用河石与灰浆砌成的老墙。">
+          <figcaption>多尔多涅的老石墙 <span>Jebulon / CC0</span></figcaption>
+        </figure>
+        <figure class="material-photo reveal d2">
+          <img src="assets/images/stone-path.jpg" width="1100" height="734" loading="lazy" alt="一条碎石小路穿过冬天的草甸，远处是一道矮石墙。">
+          <figcaption>通往石头的小路 <span>Billy McCrorie / CC BY-SA 2.0</span></figcaption>
+        </figure>
       </div>
-      <p class="material-line">石头不急着证明自己。它只是留在原地，等人回来复查。</p>
-    </figure>
-
-    <section class="section method" id="method">
-      <div class="method-head">
-        <h2 class="reveal">石头<br>怎么做。</h2>
-        <p class="reveal d1">三个动作，一条能复查的路径。每一步都留下证据，而不是只留下最后一段话。</p>
+      <div class="material-copy reveal">
+        <p class="material-line">石头不急着证明自己。它只是留在原地，等人回来复查。</p>
+        <p class="material-note">示例报告为结构示例，不是真实研究结论。</p>
       </div>
-
-      <div class="method-flow">
-        <article class="exchange reveal">
-          <p class="exchange-say">先把问题拆开。</p>
-          <div class="call-panel" data-ui>
-            <span>你的问题</span>
-            <p>具身智能为什么还没进家庭？</p>
-          </div>
-          <div class="response-panel" data-ui>
-            <div class="response-head"><span>问题树</span><span>4 个可回答的问题</span></div>
-            <ul>
-              <li>机器人本体成本降到多少，才可能进家庭？</li>
-              <li>家庭场景里，哪一类任务最先跑通？</li>
-              <li>安全与责任边界由谁承担？</li>
-              <li>现在谁在真实家庭里做长期测试？</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="exchange reveal">
-          <p class="exchange-say">只找能回到原文的证据。</p>
-          <div class="call-panel" data-ui>
-            <span>检索范围</span>
-            <p>论文、财报、监管文件、专利与公开访谈</p>
-          </div>
-          <div class="response-panel" data-ui>
-            <div class="response-head"><span>证据清单</span><span>每条都带出处</span></div>
-            <ul class="evidence-list">
-              <li><strong>2025 年人形机器人技术报告</strong><span>第 12 页 · 2025-06 · 一手</span></li>
-              <li><strong>某公司 2025 年一季度财报</strong><span>第 8 页 · 2025-04 · 一手</span></li>
-              <li><strong>家庭服务机器人安全规范（征求意见稿）</strong><span>2025-03 · 监管文件</span></li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="exchange reveal">
-          <p class="exchange-say">分歧不抹平，最后写成一份文档。</p>
-          <div class="call-panel" data-ui>
-            <span>交付</span>
-            <p>一份能拿去讨论的调研文档</p>
-          </div>
-          <div class="response-panel response-wide" data-ui>
-            <div class="response-head"><span>调研文档 · 目录</span><span>7 章</span></div>
-            <div class="mini-doc">
-              <strong>具身智能，离家庭还有多远？</strong>
-              <p>结论：最先跑通的是单一任务，而不是通用家务。</p>
-              <p>边界：仅有两家独立信源，置信度中。</p>
-              <p>下一步：验证成本、安全责任与真实家庭测试数据。</p>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section faq" id="faq">
-      <div class="faq-head">
-        <h2 class="reveal">开始之前，<br>你可能想知道。</h2>
-        <p class="reveal d1">如果这里没有你的问题，先把主题交给石头。研究从提问开始。</p>
-      </div>
-
-      <div class="faq-list">
-        <details class="faq-item reveal" open>
-          <summary>
-            <span>一次调研包含什么？</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer">
-            <p>从问题地图、证据清单、分歧标注，到一份带出处的文档。你会拿到结论、结论的边界，以及下一步该验证什么；不是一份资料合集。</p>
-          </div>
-        </details>
-
-        <details class="faq-item reveal d1">
-          <summary>
-            <span>可信吗？会不会编造？</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer">
-            <p>每条关键结论都标注出处、发布时间和置信度；事实、推论、争议分开写，无法验证的内容不会被包装成结论。当前页面是交互原型，示例内容用于展示文档结构。</p>
-          </div>
-        </details>
-
-        <details class="faq-item reveal d2">
-          <summary>
-            <span>和直接问 AI、搜索有什么区别？</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer">
-            <p>搜索给你很多页面，对话给你一段流畅的回答。石头留下的是可复查的判断：为什么得出这个结论、证据来自哪里、哪里还有分歧。</p>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="section cta" id="start">
-      <h2 class="reveal">把下一个陌生领域，<br>交给石头。</h2>
-      <form class="cta-form reveal d1" data-research-form novalidate>
-        <p class="cta-line">
-          <span>想搞懂的是</span>
-          <input
-            id="cta-topic"
-            name="topic"
-            type="text"
-            maxlength="80"
-            autocomplete="off"
-            placeholder="一个陌生领域"
-            aria-label="你想研究的主题"
-            aria-describedby="cta-note cta-error"
-          >
-          <button class="btn-cta" type="submit">开始调研</button>
-        </p>
-        <p class="field-error" id="cta-error" role="alert" hidden>先写下一个主题，再开始。</p>
-        <p class="cta-note" id="cta-note">无需登录 · 示例报告可打印导出 · 当前为交互原型</p>
-      </form>
-    </section>
+    </div>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer reveal">
     <div class="footer-line">
-      <span>石头 · 把陌生领域读成判断</span>
+      <span>石头 · 从完全陌生，到有自己的判断</span>
       <nav aria-label="页脚导航">
         <a href="#report">示例报告</a>
         <a href="#method">怎么做</a>
@@ -374,7 +379,13 @@
       </nav>
       <span>© 2026 石头 · 交互原型</span>
     </div>
-    <p class="footer-credits">照片：Jill Heyer、Paul Jarvis / Unsplash License</p>
+    <p class="footer-credits">
+      <span>照片</span>
+      <span>Jill Heyer / Unsplash</span>
+      <span>Paul Jarvis / Unsplash</span>
+      <span>Jebulon / CC0</span>
+      <span>Billy McCrorie / geograph, CC BY-SA 2.0</span>
+    </p>
   </footer>
 
   <dialog class="research-dialog" id="research-dialog" aria-label="石头调研工作台">
@@ -462,8 +473,7 @@
               <div class="doc-details">
                 <span>石头 · 调研文档</span>
                 <span data-doc-date>2026 / 10</span>
-                <span>6 章</span>
-                <span>14 个一手信源</span>
+                <span>6 节</span>
                 <span>结构示例</span>
               </div>
             </header>
