@@ -31,7 +31,7 @@ node "$HOME/.claude/skills/design-taste-frontend/scripts/inspect.mjs" index.html
 
 `verify.mjs` 覆盖导航顺序、折叠互斥、hash 直达、FAQ 单开、表单校验、弹窗流程、打印、移动菜单和减少动效；`inspect.mjs` 的截图与报告写到 `.taste-skill/inspect/`。两者都是开发辅助，不是项目依赖。
 
-部署为 Vercel 静态站点（`.vercel/project.json` 已关联项目）。`.vercel/` 被 `.gitignore` 忽略，其中的 `.vercel/output/` 是生成的静态构建产物（含 `index.html`、`assets/` 的副本），不要手改——修改源码不会自动同步到那里。
+部署使用 GitHub Pages，从 `static` 分支根目录发布（前端展示专用分支），地址为 `https://zpq990.github.io/stone_research_agent/`。仓库根目录的 `.nojekyll` 让 Pages 直接按静态文件发布，不做 Jekyll 构建；页面没有构建步骤，推送 `static` 即更新。Vercel 已停用，`.vercel/` 配置已删除，不要再添加 Vercel 相关文件。
 
 ## Page structure
 

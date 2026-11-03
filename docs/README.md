@@ -16,6 +16,14 @@ python -m http.server 4173 --bind 127.0.0.1
 
 然后访问 `http://127.0.0.1:4173`。
 
+## 部署
+
+前端展示分支为 `static`，由 GitHub Pages 从该分支根目录直接发布：
+
+`https://zpq990.github.io/stone_research_agent/`
+
+页面没有构建步骤，推送到 `static` 后 Pages 会自动更新；根目录的 `.nojekyll` 用于跳过 Jekyll 处理。Vercel 已停用。完整步骤见 `document/部署文档.md`。
+
 ## 页面包含
 
 页面是折叠式的，三块主要内容默认全部收起；访客先看到 Hero、与通用 agent 的对照，再决定展开哪一段：
